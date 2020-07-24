@@ -1,0 +1,6 @@
+package com.kempa.springdemo;
+
+public interface Coach {
+
+	public String getDailyWorkout();
+}
