@@ -8,4 +8,10 @@ public class CricketCoach implements Coach {
 		return "Run 5 rounds outside the 30 yard circle";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
