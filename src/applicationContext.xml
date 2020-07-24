@@ -7,6 +7,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
+    <!-- Loading the properties file -->
+    <context:property-placeholder location="classpath:sport.properties"/>
+    
     <!-- Define your dependency here -->
     <bean id="myFortune" class="com.kempa.springdemo.HappyFortuneService"></bean>
 
@@ -18,5 +21,10 @@
     
     <bean id="myCricketCoach" class="com.kempa.springdemo.CricketCoach">
     	<property name="fortuneService" ref="myFortune"/>
+    	
+    	<!-- Inject literal values -->
+    	<property name="emailAddress" value="vinaymp25@gmail.com" />
+    	<property name="team" value="RCB" />
+    	<property name="teamHome" value="${foo.teamHome}"/>
     </bean>
 </beans>
