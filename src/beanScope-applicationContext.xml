@@ -14,17 +14,8 @@
     <bean id="myFortune" class="com.kempa.springdemo.HappyFortuneService"></bean>
 
     <!-- Define your beans here -->
-    <bean id="myCoach" class="com.kempa.springdemo.TrackCoach">
+    <bean id="myCoach" class="com.kempa.springdemo.TrackCoach" scope="prototype">
     <!-- Setup constructor injection -->
     	<constructor-arg ref="myFortune"/>
-    </bean>
-    
-    <bean id="myCricketCoach" class="com.kempa.springdemo.CricketCoach">
-    	<property name="fortuneService" ref="myFortune"/>
-    	
-    	<!-- Inject literal values -->
-    	<property name="emailAddress" value="${foo.teamEmail}" />
-    	<property name="team" value="${foo.teamName}" />
-    	<property name="teamHome" value="${foo.teamHome}"/>
     </bean>
 </beans>
